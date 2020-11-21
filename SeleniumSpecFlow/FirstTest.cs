@@ -19,6 +19,7 @@ namespace SeleniumSpecFlow
         {
             IWebDriver driver = new ChromeDriver();
             driver.Url = "http://www.google.co.in";
+            driver.Quit();
         }
     }
 }
