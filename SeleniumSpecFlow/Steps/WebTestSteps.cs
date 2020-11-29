@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 namespace SeleniumSpecFlow.Steps
 {
     [Binding]
-    public class AutomationPracticeTestScenariosSteps : ObjectFactory
+    public class WebTestSteps : ObjectFactory
     {
         private string selectedProduct;
         private string totalProducts;

@@ -2,19 +2,13 @@
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using BoDi;
-using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.Extensions;
+using RestSharp;
 using SeleniumSpecFlow.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumSpecFlow
 {
@@ -23,6 +17,8 @@ namespace SeleniumSpecFlow
     {
        
         public static IWebDriver Driver { get; private set; }
+        public static RestClient restClient { get; private set; }
+
         private readonly IObjectContainer _objectContainer;
         public static string ProjectPath = AppDomain.CurrentDomain.BaseDirectory.ToString().Remove(AppDomain.CurrentDomain.BaseDirectory.ToString().LastIndexOf("\\") - 24);
         public static string PathReport = ProjectPath + "\\TestResults\\Report\\ExtentReport.html";
@@ -62,13 +58,15 @@ namespace SeleniumSpecFlow
 
 
         [BeforeScenario("api")]
-        public void BeforeScenarioApi()
+        public void BeforeScenarioApi(ScenarioContext scenarioContext)
         {
-            Console.WriteLine("api");
+             restClient = new RestClient(Config.ApiUrl);
+            _scenario = _feature.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
+            _scenario.AssignCategory(scenarioContext.ScenarioInfo.Tags);
         }
 
-        [AfterStep]
-        public static void InsertReportingSteps(ScenarioContext scenarioContext)
+        [AfterStep("web")]
+        public static void InsertReportingStepsWeb(ScenarioContext scenarioContext)
         {
             var ScreenshotFilePath = Path.Combine(ProjectPath + "\\TestResults\\Img", Path.GetFileNameWithoutExtension(Path.GetTempFileName()) + ".png");
             var mediaModel = MediaEntityBuilder.CreateScreenCaptureFromPath(ScreenshotFilePath).Build();
@@ -130,12 +128,77 @@ namespace SeleniumSpecFlow
             }
         }
 
+        [AfterStep("api")]
+        public static void InsertReportingStepsApi(ScenarioContext scenarioContext)
+        {
+            if (scenarioContext.TestError != null)
+            {
+                switch (ScenarioStepContext.Current.StepInfo.StepDefinitionType)
+                {
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Given:
+                        _scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.When:
+                        _scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Then:
+                        _scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                        break;
+                }
+            }
+
+            if (scenarioContext.ScenarioExecutionStatus == ScenarioExecutionStatus.StepDefinitionPending)
+            {
+                switch (ScenarioStepContext.Current.StepInfo.StepDefinitionType)
+                {
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Given:
+                        _scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.When:
+                        _scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Then:
+                        _scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+                        break;
+                }
+            }
+
+            if (scenarioContext.TestError == null)
+            {
+                switch (ScenarioStepContext.Current.StepInfo.StepDefinitionType)
+                {
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Given:
+                        _scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Pass(string.Empty);
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.When:
+                        _scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Pass(string.Empty);
+                        break;
+
+                    case TechTalk.SpecFlow.Bindings.StepDefinitionType.Then:
+                        _scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Pass(string.Empty);
+                        break;
+                }
+            }
+        }
+
         [AfterScenario("web")]
         public void AfterScenarioWeb()
         {
             _extent.Flush();
             Driver?.Quit();
             Driver?.Dispose();
+            GC.SuppressFinalize(this);
+        }
+
+        [AfterScenario("api")]
+        public void AfterScenarioApi()
+        {
+            _extent.Flush();
             GC.SuppressFinalize(this);
         }
     }

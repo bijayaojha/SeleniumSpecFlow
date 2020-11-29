@@ -28,7 +28,7 @@ namespace WebLibrary
         private string ConfirmMessage => "//*[contains(text(),'{0}')]";
         public void SelectMenu(string menu)
         {
-            Menu.Where(a => a.GetAttribute("title").Contains(menu)).FirstOrDefault().Click();
+            Menu.Where(a => a.GetAttribute("title").Equals(menu)).FirstOrDefault().Click();
         }
         public void ClickOrderHistory() => OrderHistory.Click();
         public void SelectRandomOrder(out string orderNumber, out string orderDate)

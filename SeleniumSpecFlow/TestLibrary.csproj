@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApiLibrary\ApiLibrary.csproj" />
     <ProjectReference Include="..\WebLibrary\WebLibrary.csproj" />
   </ItemGroup>
 

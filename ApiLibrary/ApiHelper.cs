@@ -8,14 +8,7 @@ namespace ApiLibrary
 {
     public class ApiHelper
     {
-        public RestClient SetUri(string endpoint)
-        {
-            string baseUri = "https://reqres.in/";
-            string uri = Path.Combine(baseUri, endpoint);
-            return new RestClient(uri);
-        }
-
-        public RestRequest CreateRequest(dynamic payload, string method)
+        public static IRestResponse CreateRequest(object payload, string method, RestClient restClient, string resource)
         {
             RestRequest request = new RestRequest();
             var dict = new Dictionary<string, string>
@@ -27,40 +20,26 @@ namespace ApiLibrary
             {
                 case Methods.GET:
                     request.Method = Method.GET;
-                    return request;
+                    break;
                 case Methods.POST:
+                    request.AddJsonBody(payload);
                     request.Method = Method.POST;
                     break;
                 case Methods.PUT:
+                    request.AddJsonBody(payload);
                     request.Method = Method.PUT;
                     break;
                 case Methods.DELETE:
+                    request.AddJsonBody(payload);
                     request.Method = Method.DELETE;
                     break;
             }
-          //  request.AddParameter("application/json", payload, ParameterType.RequestBody);
-            return request;
+            request.Resource = resource;
+            IRestResponse response = restClient.Execute(request);
+            return response;
         }
 
-        public RestRequest CreateRequest(string method)
-        {
-            return CreateRequest(null, method);
-        }
-
-        public IRestResponse GetResponse(RestClient client, RestRequest request)
-        {
-            return client.Execute(request);
-        }
-
-      /*  public T GetContent<T>(dynamic response) where T : ICommonModel
-        {
-           // return JsonConvert.DeserializeObject<T>(response.Content);
-        }*/
-
-        public string Serialize<T>(T request) where T : ICommonModel
-        {
-            return JsonConvert.SerializeObject(request);
-        }
+      
     }
 
     public static class Methods

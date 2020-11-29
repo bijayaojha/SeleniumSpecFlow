@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ApiLibrary.RequestDTO;
+using System;
 using WebLibrary;
 
 namespace SeleniumSpecFlow.Utilities
@@ -14,6 +13,7 @@ namespace SeleniumSpecFlow.Utilities
         public Lazy<Product> Product = new Lazy<Product>(() => new Product(Hooks.Driver));
         public Lazy<Order> Order = new Lazy<Order>(() => new Order(Hooks.Driver));
         public Lazy<DriverFactory> DriverFactory = new Lazy<DriverFactory>();
+        public Lazy<CreateUser> CreateUser = new Lazy<CreateUser>();
     }
 
 }
