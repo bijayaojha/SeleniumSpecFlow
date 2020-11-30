@@ -17,50 +17,7 @@ namespace TestLibrary.Steps
     {
         public IRestResponse restResponse { get; private set; }
 
-        [Given(@"Create json")]
-        public void GivenCreateJson()
-        {
-            CreateUser.Value.job = "Test";
-            CreateUser.Value.name = "Bijay";
-            IRestResponse restResponse = ApiHelper.CreateRequest(CreateUser, "POST", Hooks.restClient, "api/users");
-
-            //Creating Client connection	
-            RestClient restClient = new RestClient("https://reqres.in/");
-
-            RestRequest request = new RestRequest("api/users", Method.POST);
-            request.AddHeader("Accept", "application/json");
-
-            request.AddJsonBody(CreateUser);
-
-            IRestResponse response = restClient.Execute(request);
-
-            // Extracting output data from received response
-            string response1 = response.Content;
-
-            // Parsing JSON content into element-node JObject
-            var jObject = JObject.Parse(response.Content);
-            string city = jObject.GetValue("id").ToString();
-            // Executing request to server and checking server response to the it
-
-            string getreq = "api/users/{0}";
-
-            string s = String.Format(getreq, city);
-
-            RestRequest request3 = new RestRequest("api/users/2", Method.GET);
-            request3.AddHeader("Accept", "application/json");
-
-
-
-
-            IRestResponse response6 = restClient.Execute(request3);
-
-            // Extracting output data from received response
-            string response14 = response6.Content;
-
-            // Extracting output data from received response
-
-        }
-
+      
         [Given(@"I create request body for endpoint")]
         public void GivenICreateRequestBodyForEndpoint()
         {

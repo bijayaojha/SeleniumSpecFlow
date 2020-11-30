@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLibrary", "SeleniumSpec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLibrary", "WebLibrary\WebLibrary.csproj", "{F5DB5E7C-C916-4498-A06F-89E583DC4AE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLibrary", "ApiLibrary\ApiLibrary.csproj", "{358DB93E-3D2F-4F70-A6A9-03ED75C961CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiLibrary", "ApiLibrary\ApiLibrary.csproj", "{358DB93E-3D2F-4F70-A6A9-03ED75C961CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
