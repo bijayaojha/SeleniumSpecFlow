@@ -49,7 +49,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">11/29/2020 8:44:18 PM</span>
+                    <span class="badge badge-primary">11/30/2020 12:33:46 PM</span>
                 </a>
             </li>
         </ul>
@@ -104,7 +104,7 @@
 						<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																				<div class="dropdown-divider"></div>
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>						<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																														<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
 				</li>
@@ -118,24 +118,305 @@
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">Automation Practice Test Scenarios</p> 
-								<p class="duration text-sm">0h:1m:37s+430ms</p> 
-								<span class="datetime">20:44:18 PM</span>
+								<p class="name">ReqRes Scenarios</p> 
+								<p class="duration text-sm">0h:0m:8s+543ms</p> 
+								<span class="datetime">12:33:46 PM</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-pass">Automation Practice Test Scenarios</h5>
-										<span class='badge badge-success'>11/29/2020 8:44:18 PM</span>
-										<span class='badge badge-danger'>11/29/2020 8:45:55 PM</span>
-										<span class='badge badge-default'>0h:1m:37s+430ms</span>
+										<h5 class="test-status text-pass">ReqRes Scenarios</h5>
+										<span class='badge badge-success'>11/30/2020 12:33:46 PM</span>
+										<span class='badge badge-danger'>11/30/2020 12:33:54 PM</span>
+										<span class='badge badge-default'>0h:0m:8s+543ms</span>
 									</div>
 																	</div>
 							</div>
 
 <div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Create User using "/api/users"</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I create request body for endpoint</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "POST" for "/api/users"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate the response for "/api/users"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate response status should be 201</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Delete User using "/api/users/2"</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "DELETE" for "/api/users/2"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate the response for /api/users/2 after delete</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate response status should be 204</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Get User using "/api/users/2"</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "GET" for "/api/users/2"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate the response for /api/users/2</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate response status should be 200</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Update User using "/api/users/2"</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I create request body for endpoint</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "PUT" for "/api/users/2"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate the response for updated /api/users/2</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate response status should be 200</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: User Not Found using "/api/users/23"</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I requested "GET" for "/api/users/23"</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate the response for /api/users/23</span>
+                            </div>
+			<div class="details"></div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate response status should be 404</span>
+                            </div>
+			<div class="details"></div>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="24"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">Automation Practice Test Scenarios</p> 
+								<p class="duration text-sm">0h:2m:29s+119ms</p> 
+								<span class="datetime">12:33:54 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">Automation Practice Test Scenarios</h5>
+										<span class='badge badge-success'>11/30/2020 12:33:54 PM</span>
+										<span class='badge badge-danger'>11/30/2020 12:36:23 PM</span>
+										<span class='badge badge-default'>0h:2m:29s+119ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Capture Image</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When User logged into application</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBA70.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBA70.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBA70.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I select Order history and details</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC3A8.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC3A8.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC3A8.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I select a random order from existing orders</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC59D.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC59D.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC59D.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I validate order details</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpCA41.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpCA41.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpCA41.png'></span>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I enter a message</span>
+                            </div>
+			<div class="details"></div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpD406.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpD406.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpD406.png'></span>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon fail-bg">
+                                    <i class="fa fa-times text-white"></i>
+                                </span>
+                                <span>Then I validate the message for negative scenario</span>
+                            </div>
+			<div class="details">Expected string length 13 but was 10. Strings differ at index 0.
+  Expected: "Wrong Message"
+  But was:  "HV3JX694OP"
+  -----------^</div>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpDC26.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpDC26.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpDC26.png'></span>
+                    </div>
+				</div>
+	</div>
 	<div class="card">
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
@@ -154,7 +435,7 @@
                                 <span>When User logged into application</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp41A9.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp41A9.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp41A9.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3BCB.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3BCB.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3BCB.png'></span>
                             <div class="d-flex align-items-center justify-content-start given" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -162,7 +443,7 @@
                                 <span>Given I select "Women" from the menu</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp56F7.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp56F7.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp56F7.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp4D50.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp4D50.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp4D50.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -170,7 +451,7 @@
                                 <span>When I select a product from catalogue</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A51.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A51.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A51.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5CB3.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5CB3.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5CB3.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -178,7 +459,7 @@
                                 <span>When I select size "M" from size</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6C56.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6C56.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6C56.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5E89.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5E89.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp5E89.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -186,7 +467,7 @@
                                 <span>When I get the product details</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6E2C.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6E2C.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6E2C.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp606E.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp606E.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp606E.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -194,7 +475,7 @@
                                 <span>Then I click on Add To Cart</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7040.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7040.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7040.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6244.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6244.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6244.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -202,7 +483,7 @@
                                 <span>Then I selected "Continue shopping" action</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp8D8D.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp8D8D.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp8D8D.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7F62.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7F62.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7F62.png'></span>
                             <div class="d-flex align-items-center justify-content-start given" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -210,7 +491,7 @@
                                 <span>Given I select "Women" from the menu</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9B4A.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9B4A.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9B4A.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9404.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9404.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp9404.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -218,7 +499,7 @@
                                 <span>When I select a product from catalogue which is not already added to cart</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6C4.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6C4.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6C4.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA318.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA318.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA318.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -226,7 +507,7 @@
                                 <span>When I get the product details</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA8AA.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA8AA.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA8AA.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA4FE.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA4FE.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA4FE.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -234,7 +515,7 @@
                                 <span>Then I click on Add To Cart</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpAACD.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpAACD.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpAACD.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6E3.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6E3.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpA6E3.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -242,7 +523,7 @@
                                 <span>Then I get the details of Cart</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC03B.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC03B.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpC03B.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBC51.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBC51.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBC51.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -250,7 +531,7 @@
                                 <span>Then I selected "Proceed to checkout" action</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpEC7C.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpEC7C.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpEC7C.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpE507.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpE507.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpE507.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -258,7 +539,7 @@
                                 <span>When I get the cart details</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp237.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp237.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp237.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp543D.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp543D.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp543D.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -266,7 +547,7 @@
                                 <span>Then I validate cart details</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3FE.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3FE.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp3FE.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp55F4.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp55F4.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp55F4.png'></span>
                             <div class="d-flex align-items-center justify-content-start when" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -274,7 +555,7 @@
                                 <span>When I placed order using "By Bank Wire"</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp68D3.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp68D3.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp68D3.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB03A.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB03A.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB03A.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -282,7 +563,7 @@
                                 <span>Then I validate order conformation</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A7A.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A7A.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp6A7A.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB1B2.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB1B2.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpB1B2.png'></span>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
@@ -290,7 +571,7 @@
                                 <span>Then I sign out of the application</span>
                             </div>
 			<div class="details"></div>
-			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7875.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7875.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmp7875.png'></span>
+			<span class="badge badge-primary"><img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBF11.png' src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBF11.png' data-src='C:\Bijay Tests\Selenium\SeleniumSpecFlow\SeleniumSpecFlow\TestResults\Img\tmpBF11.png'></span>
                     </div>
 				</div>
 	</div>
@@ -328,11 +609,11 @@
 	                </div>
 	            </div>
 	            <div class="card-footer">
-	                <div><small data-tooltip='100%'>
+	                <div><small data-tooltip='50%'>
 	                    <b>1</b> features passed
                     </small></div>
 	                <div>
-	                    <small data-tooltip='0%'><b>0</b> features failed, 
+	                    <small data-tooltip='50%'><b>1</b> features failed, 
 	                    <b data-tooltip='0%'>0</b> others
 	                    </small>
                     </div>
@@ -350,9 +631,9 @@
 	                </div>
 	            </div>
 	            <div class="card-footer">
-	                <div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+	                <div><small data-tooltip='85.71428571428571%'><b>6</b> scenarios passed</small></div>
 	                <div>
-	                    <small data-tooltip='0%'><b>0</b> scenarios failed, 
+	                    <small data-tooltip='14.285714285714285%'><b>1</b> scenarios failed, 
 	                    <b data-tooltip='0%'>0</b> others
 	                    </small>
                     </div>
@@ -370,9 +651,9 @@
 	                </div>
 	            </div>
 	            <div class="card-footer">
-	                <div><small data-tooltip='100%'><b>18</b> steps passed</small></div>
+	                <div><small data-tooltip='97.5609756097561%'><b>40</b> steps passed</small></div>
 	                <div>
-	                    <small data-tooltip='0%'><b>0</b> steps failed, 
+	                    <small data-tooltip='2.4390243902439024%'><b>1</b> steps failed, 
 	                    <b data-tooltip='0%'>0</b> others
 	                    </small>
                     </div>
@@ -387,10 +668,10 @@
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Features</h6>
-							<h2 class="font-size-28 font-weight-light">1</h2>
+							<h2 class="font-size-28 font-weight-light">2</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-								<span>100%</span>
+								<span>50%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -406,10 +687,10 @@
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Scenarios</h6>
-							<h2 class="font-size-28 font-weight-light">1</h2>
+							<h2 class="font-size-28 font-weight-light">7</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-								<span>100%</span>
+								<span>85.71%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -425,7 +706,7 @@
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Start</h6>
-							<h6 class="font-weight-light">11/29/2020 8:44:18 PM</h6>
+							<h6 class="font-weight-light">11/30/2020 12:33:46 PM</h6>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -441,7 +722,7 @@
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Duration</h6>
-							<h6 class="font-weight-light">00:01:37.4815228</h6>
+							<h6 class="font-weight-light">00:02:37.7058333</h6>
 							<span class="text-semibold text-danger font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -457,34 +738,34 @@
 </div>
 <script>
 	var statusGroup = {
-    parentCount: 1,
+    parentCount: 2,
 		passParent: 1,
-		failParent: 0,
+		failParent: 1,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 0,
-		childCount: 1,
-		passChild: 1,
-		failChild: 0,
+		exceptionsParent: 1,
+		childCount: 7,
+		passChild: 6,
+		failChild: 1,
 		fatalChild: 0,
 		errorChild: 0,
 		warningChild: 0,
 		skipChild: 0,
 		infoChild: 0,
 		debugChild: 0,
-		exceptionsChild: 0,
-		grandChildCount: 18,
-		passGrandChild: 18,
-		failGrandChild: 0,
+		exceptionsChild: 1,
+		grandChildCount: 41,
+		passGrandChild: 40,
+		failGrandChild: 1,
 		fatalGrandChild: 0,
 		errorGrandChild: 0,
 		warningGrandChild: 0,
 		skipGrandChild: 0,
 		infoGrandChild: 0,
 		debugGrandChild: 0,
-		exceptionsGrandChild: 0,
+		exceptionsGrandChild: 1,
 	};
 </script>
 
