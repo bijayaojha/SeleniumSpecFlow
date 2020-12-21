@@ -23,6 +23,7 @@ namespace SeleniumSpecFlow
         private readonly IObjectContainer _objectContainer;
         public static string ProjectPath = AppDomain.CurrentDomain.BaseDirectory.ToString().Remove(AppDomain.CurrentDomain.BaseDirectory.ToString().LastIndexOf("\\") - 24);
         public static string PathReport = ProjectPath + "\\TestResults\\Report\\ExtentReport.html";
+        public static string filePath = $"{TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.jpg";
         private static ExtentTest _feature;
         private static ExtentTest _scenario;
         private static ExtentReports _extent;
@@ -71,7 +72,7 @@ namespace SeleniumSpecFlow
         {
             var ScreenshotFilePath = Path.Combine(ProjectPath + "\\TestResults\\Img", Path.GetFileNameWithoutExtension(Path.GetTempFileName()) + ".png");
             var mediaModel = MediaEntityBuilder.CreateScreenCaptureFromPath(ScreenshotFilePath).Build();
-            var filePath = $"{TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.jpg";
+           
 
             if (scenarioContext.TestError != null)
             {
@@ -196,6 +197,7 @@ namespace SeleniumSpecFlow
             _extent.Flush();
             Driver?.Quit();
             Driver?.Dispose();
+            TestContext.AddTestAttachment(filePath);
             GC.SuppressFinalize(this);
         }
 
